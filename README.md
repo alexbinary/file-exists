@@ -16,11 +16,17 @@ $ yarn add https://github.com/alexbinary/file-exists.git
 ```javascript
 let fileExists = require('alexbinary.file-exists')
 
+// callback
 fileExists('/path/to/file', (err, exists) => {
   console.log('file exists: ' + (exists ? 'yes' : 'no'))
 })
 
-// sync version
+// promise
+fileExists('/path/to/file').then((exists) => {
+  console.log('file exists: ' + (exists ? 'yes' : 'no'))
+})
+
+// sync
 let exists = fileExists.sync('/path/to/file')
 console.log('file exists: ' + (exists ? 'yes' : 'no'))
 ```
