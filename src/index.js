@@ -2,7 +2,7 @@
 let fs = require('fs')
 let promisify = require('alexbinary.promisify')
 
-let fileExists = promisify(null, function (filepath, cb) {
+let fileExists = promisify(function (filepath, cb) {
   fs.access(filepath, (err) => {
     cb(null, !err)
   })
