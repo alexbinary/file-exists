@@ -29,7 +29,7 @@ describe('file-exists', function () {
   describe('promise', function () {
     it('exists', function (done) {
       // ## TEST
-      fileexists(__filename).then(exists => {
+      fileexists(__filename).then((exists) => {
         // ## Assert
         expect(exists).to.be.true
         // ## End
@@ -37,7 +37,7 @@ describe('file-exists', function () {
     })
     it('not exist', function (done) {
       // ## TEST
-      fileexists(__filename + 'foo').then(exists => {
+      fileexists(__filename + 'foo').then((exists) => {
         // ## Assert
         expect(exists).to.be.false
         // ## End
