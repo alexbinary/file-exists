@@ -3,6 +3,24 @@ let expect = require('chai').expect
 let fileexists = require('./../src/index')
 
 describe('file-exists', function () {
+  describe('promise', function () {
+    it('exists', function (done) {
+      // ## TEST
+      fileexists(__filename).then((exists) => {
+        // ## Assert
+        expect(exists).to.be.true
+        // ## End
+      }).then(() => done()).catch(done)
+    })
+    it('not exist', function (done) {
+      // ## TEST
+      fileexists(__filename + 'foo').then((exists) => {
+        // ## Assert
+        expect(exists).to.be.false
+        // ## End
+      }).then(() => done()).catch(done)
+    })
+  })
   describe('callback', function () {
     it('exists', function (done) {
       // ## TEST
@@ -23,24 +41,6 @@ describe('file-exists', function () {
         // ## End
         done()
       })
-    })
-  })
-  describe('promise', function () {
-    it('exists', function (done) {
-      // ## TEST
-      fileexists(__filename).then((exists) => {
-        // ## Assert
-        expect(exists).to.be.true
-        // ## End
-      }).then(() => done()).catch(done)
-    })
-    it('not exist', function (done) {
-      // ## TEST
-      fileexists(__filename + 'foo').then((exists) => {
-        // ## Assert
-        expect(exists).to.be.false
-        // ## End
-      }).then(() => done()).catch(done)
     })
   })
   describe('sync', function () {
