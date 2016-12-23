@@ -1,7 +1,7 @@
 {
   "name": "alexbinary.file-exists",
   "description": "Simple and consistent way to check if a file exists 🔎",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "repository": "https://github.com/alexbinary/file-exists.git",
   "bugs": "https://github.com/alexbinary/file-exists/issues",
