@@ -1,6 +1,5 @@
 
 let expect = require('chai').expect
-
 let fileexists = require('./../src/index')
 
 describe('file-exists', function () {
@@ -33,7 +32,7 @@ describe('file-exists', function () {
         // ## Assert
         expect(exists).to.be.true
         // ## End
-      }).then(() => done()).catch(() => done())
+      }).then(() => done()).catch(done)
     })
     it('not exist', function (done) {
       // ## TEST
@@ -41,7 +40,7 @@ describe('file-exists', function () {
         // ## Assert
         expect(exists).to.be.false
         // ## End
-      }).then(() => done()).catch(() => done())
+      }).then(() => done()).catch(done)
     })
   })
   describe('sync', function () {
