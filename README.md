@@ -3,13 +3,16 @@ Simple and consistent way to check if a file exists 🔎
 
 ## Install
 
-Install with npm/yarn :
+This package is not hosted on the NPM registry.
+You must install directly from GitHub using the npm or yarn client :
 
+```bash
+$ npm install alexbinary/file-exists
+# or
+$ yarn add alexbinary/file-exists
 ```
-$ npm install https://github.com/alexbinary/file-exists.git
 
-$ yarn add https://github.com/alexbinary/file-exists.git
-```
+This will install the latest version from the `master` branch, which sould always be the latest stable version.
 
 ## Usage
 
