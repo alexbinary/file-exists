@@ -1,6 +1,6 @@
 
 let fs = require('fs')
-let promisify = require('alexbinary.promisify')
+let promisify = require('@alexbinary/promisify')
 
 let fileExists = promisify(function (filepath, cb) {
   fs.access(filepath, (err) => {
