@@ -10,7 +10,6 @@ Simple and consistent way to check if a file exists 🔎
 
 Uses [@alexbinary/promisify](https://www.npmjs.com/package/@alexbinary/promisify) by [alexbinary](https://www.npmjs.com/~alexbinary)
 
-
 ## Install
 
 Install using npm or yarn :
